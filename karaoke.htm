@@ -11,7 +11,10 @@
 </head>
 <body style="padding:0px">
 <div class="video-inner" style="background-color: antiquewhite;">
-    <iframe frameborder="0" allowfullscreen="1" title="YouTube video player" src="https://www.youtube.com/embed/AIZmEM0jGS0?list=PLUzRe8uA6JoeVArmT5GHg9-8OkRgD5LX9"></iframe>
+  <iframe id="youtube_song" frameborder="0" allowfullscreen="1" title="YouTube video player" src="https://www.youtube.com/embed/AIZmEM0jGS0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+</div>
+<div style="height: 500px; overflow: auto;">
+  <li onclick="document.getElementById('youtube_song').src='https://www.youtube.com/embed/95_cswOnHrc'" style="cursor: pointer;">슬픈그림같은사랑(이상우)</li>
 </div>
 </body>
 </html>
