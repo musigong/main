@@ -11,7 +11,7 @@
   </style>
 </head>
 <body style="padding:0px">
-<div class="video-inner" style="background-color: antiquewhite;">
+<div id="youtube_frame" class="video-inner" style="background-color: antiquewhite;">
   <iframe id="youtube_song" frameborder="0" allowfullscreen="1" title="YouTube video player" src="https://www.youtube.com/embed/AIZmEM0jGS0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
 </div>
 <div style="background-color:#edddff;">
@@ -48,6 +48,18 @@
   function SelectSong(a){
     a=a.replace("youtu.be","www.youtube.com/embed");
     document.getElementById('youtube_song').src=a;
-    window.scrollTo(0,0)
+    window.scrollTo(0,0);
   }
+  function HWview(){
+    var YF=document.getElementById("youtube_frame");
+    var WH_rate=window.innerWidth/window.innerHeight;
+    if(WH_rate>1.7){
+      YF.style.width="90%";
+      YF.style.paddingBottom="50.625%";
+    }else{
+      YF.style.width="100%";
+    }
+  }
+  HWview();
+  window.addEventListener("resize",HWview);
 </script>
