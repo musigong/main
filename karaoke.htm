@@ -45,3 +45,10 @@
 </div>
 </body>
 </html>
+<script type="text/javascript">
+  function SelectSong(a){
+    a=a.replace("youtu.be","www.youtube.com/embed");
+    document.getElementById('youtube_song').src=a;
+    window.scrollTo(0,0)
+  }
+</script>
