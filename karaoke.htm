@@ -7,19 +7,18 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="shortcut icon" href="/favicon.ico">
   <style>
-    li{line-height: 30px; border-top: solid 1px #FFFFFF; border-bottom: solid 1px #dabaff; cursor: pointer;}
+    li{cursor: pointer;}
   </style>
 </head>
 <body style="padding:0px">
 <div id="youtube_frame" class="video-inner" style="background-image: url(https://yt3.ggpht.com/EZYx7ny8t4DDle0CGX3xWdEjY8TI0tkkk-dHPjWSh96OeZu4S6ohMiOz0PQ2dZ-PKULkYupFug=s176-c-k-c0x00ffffff-no-rj); background-size: contain; background-position: center; background-repeat:no-repeat;">
   <iframe id="youtube_song" frameborder="0" allowfullscreen="1" title="YouTube video player" src="https://www.youtube.com/embed/zJ7d7KiLUA4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
 </div>
-<div style="background-color:#edddff;">
+<div id="song_list" style="overflow: auto; color: #685dff;">
   <li onclick="SelectSong('https://youtu.be/zJ7d7KiLUA4')">꽃물(신유)</li>
   <li onclick="SelectSong('https://youtu.be/OF4MVZEepfA')">꽃바람여인(조승구)</li>
   <li onclick="SelectSong('https://youtu.be/ESnrb--1yFQ')">꽃을든남자(최석준)</li>
   <li onclick="SelectSong('https://youtu.be/bRtH_sFasE8')">내나이가어때서(오승근)</li>
-  <li onclick="SelectSong('https://youtu.be/8sADv9ORQ2o')">내사랑내곁에(김현식)</li>
   <li onclick="SelectSong('https://youtu.be/xh9rKIsCSxE')">돌아와요부산항에(조용필)</li>
   <li onclick="SelectSong('https://youtu.be/U-WmX0b_efo')">동반자(태진아)</li>
   <li onclick="SelectSong('https://youtu.be/HimKSISZSyc')">무조건(박상철)</li>
@@ -34,7 +33,7 @@
   <li onclick="SelectSong('https://youtu.be/LJ0YCBjAGck')">있을때잘해(오승근)</li>
   <li onclick="SelectSong('https://youtu.be/KUzfepegWdk')">자옥아(박상철)</li>
   <li onclick="SelectSong('https://youtu.be/brAk__7Mxqg')">찐이야(영탁)</li>
-  <li onclick="SelectSong('https://youtu.be/JU_1lOUrPGU')">최고최고(춘향이)</li>
+  <li onclick="SelectSong('https://youtu.be/JU_1lOUrPGU')" style="color: #ff5db1;">최고최고(춘향이)</li>
   <li onclick="SelectSong('https://youtu.be/-7VpwX6rFuM')">최고최고(춘향이) 남자키</li>
   <li onclick="SelectSong('https://youtu.be/0M4Edi9NEo8')">춘향아(박현빈)</li>
   <li onclick="SelectSong('https://youtu.be/ZD6ZypIe4zE')">한잔해(박군)</li>
@@ -58,6 +57,8 @@
       YF.style.width="100%";
       YF.style.paddingBottom="56.25%";
     }
+    var SL=document.getElementById('song_list');
+    SL.style.height=window.innerHeight+"px";
   }
   HWview();
   window.addEventListener("resize",HWview);
