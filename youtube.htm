@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=0.5, user-scalable=yes"/>
+  <title>Karaoke</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="shortcut icon" href="/favicon.ico">
+<style>
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:0.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace, monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace, monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}[type="search"]::-webkit-search-cancel-button,[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+/*기본색상 : light-back #FFEFF7 dark-back #EFB5D1 font #000F18 red #D20017 light-red #E09E70*/
+a { text-decoration:none; color:#000F18; font-family:"Nanum_web" }
+a:hover { text-decoration:none; color:#D20017; background-color:#FFF }
+body {margin:0px}
+td {line-height:160%; font-family:"Nanum_web"}
+img {border:none }
+input {font-size:16px}
+input.btn{ cursor:pointer; padding:5px 10px }
+textarea {font-size:16px}
+select {font-size:16px}
+p,div { line-height:160%; margin:0px; font-family:"Nanum_web" }
+li{cursor: pointer;}
+li.male{color: #685dff; display:block; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; padding: 0px 10px}
+li.female{color: #ff5db1; display:block; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; padding: 0px 10px }
+.ellipsis { display:block; text-overflow:ellipsis; overflow:hidden; white-space:nowrap }
+.video-inner{position: relative; width: 100%; padding-bottom: 56.25%; overflow: hidden;}
+.video-inner iframe{position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;}
+</style>
+</head>
+<body style="padding:0px">
+<div id="youtube_frame" class="video-inner" style="background-image: url(https://yt3.ggpht.com/EZYx7ny8t4DDle0CGX3xWdEjY8TI0tkkk-dHPjWSh96OeZu4S6ohMiOz0PQ2dZ-PKULkYupFug=s176-c-k-c0x00ffffff-no-rj); background-size: contain; background-position: center; background-repeat:no-repeat;">
+  <iframe id="youtube_song" frameborder="0" allowfullscreen="1" title="YouTube video player" src="https://www.youtube.com/embed/zJ7d7KiLUA4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+</div>
+<div id="song_list" style="overflow: auto;">
+  <li class="male" onclick="SelectSong('https://youtu.be/Y-gSbpWUXQQ')">Musigong introduction</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/WLUM21MOfhI')">Musigong Life Experiences</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/HtiBW70eig0')">About the Corona virus (Covid-19)</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/7qeuIXyzMhA')">The master key system (Bi-Gong-Seon-Gi-Tuk)</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/7FhY4qGWvK0')">Master Key System | The Master Key System of Musigong Life</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/TOJhEdN7abM')">Musigong Conversation | A Crow (1) The most sensitive animal to Earth's changes</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/8eI0_u5A_Ic')">Musigong Cheheum experience</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/1iVfzseCBcM')">Musigong Conversation | More powerful viruses are coming. 10 different viruses’ features</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/zivcqOQQVMg')">Musigong Conversation | Boriska from Mars</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/l770xKJNWxk')">Musigong Conversation | A prophecy of the universe</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/-b-iuV-YW44')">Musigong Conversation | Conversation with Haoi (a representative of the moon)</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/vG580jl6Hss')">Musigong Conversation | The identity of a strange sound in Guizhou Province, China.</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/4Fp8sEeVem4')">Musigong Conversation | An underground race</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/cg9LS8AswyE')">Musigong Conversation | Giant oarfish to announce the sinking of Japan. (June 22th, 2020)</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/QMQrN0Vxsik')">Musigong Life | 1. WHAT IS THE STUDY OF MUSIGONG LIFE?</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/c8eJb9bv7TA')">Musigong Life | 2. THE MIND AND MATTER ARE ONE. LIFE AND ENERGY ARE ONE.</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/Jg0VCmHQN8Y')">Musigong Life | 3. TO AWAKEN HUMAN BEINGS</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/M5YI3pSlvjI')">Musigong Life | 4. THE PRINCIPLE OF MAINTAINING IL-WON-SHIM: LOOK ONLY AT YOURSELF</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/DpFFfItVotk')">Musigong Life | 5. Who am I?</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/FXlZhMBxC9o')">Musigong Life | 6. SHIFTING YOUR PERSPECTIVE WILL LEAD YOU TO DIFFERENT RESULTS</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/BVLdheYz-L8')">Musigong Life | 7. A WORLD WHERE WE LIVE BASED ON THE POWER OF THE MIND</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/mrdgz7D2418')">Musigong Life | 8. ABOUT MUSIGONG LIFE BLACK HOLE</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/gLwMrl_2gsI')">Musigong Life | TRANSFORMATION OF EARTH</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/yjjHvpUFDXY')">Musigong Life | TRANSFORMATION OF THE BODY WITH ASA ENERGY</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/hjq6vNDca5o')">Musigong Life | DISCOVERY OF MUSIGONG LIFE / GREAT JUDGEMENT, SELECTION, PURIFICATION</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/DuaT9vlg2x8')">Master Key System l 1. Master Key System of Musigong Life</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/kbWc0alTrxs')">Master Key System l 2. Formulas of Musigong Life</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/nNMH_5j6BTk')">Musigong Conversation | The Mayan Calendar Explained By Marang</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/iChegpLEams')">Master Key System l 3. Declarations of the Birth of Musigong Life</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/7Z9ZQzpc8vc')">Master Key System l 4. Action Guidelines of Musigong Life</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/DLrTYmsoU-Y')">Master Key System l 5. Characteristics of Musigong Life</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/V79O35_TAqM')">Master Key System l (All) Master Key System of Musigong Life (All kinds : 1~5)</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/J_C4m457IeY')">Musigong Prophecy Discussion | 1. The Earth’s Natural Disasters</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/qK36GKt_xsg')">Musigong Prophecy Discussion | 2. The Changes in Earth</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/vRIJvMDeTy8')">Musigong Prophecy Discussion | 3. Ways to Escape the Five Disasters</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/ParuZsQDul0')">Musigong Prophecy Discussion | 4. The virus</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/RyJS3TJGE10')">Musigong Conversation | Stopping Holograms and Robots from Attacking Earth</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/-G6Gbvwarrs')">Musigong Conversation | The Recent and Frequent Antarctic Earthquakes</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/iniN6TccrT0')">Musigong Conversation | Australian Sea Foam</li>
+  <li class="female" onclick="SelectSong('https://youtu.be/ypp6Tk62lsY')">A Secret Encounter with a Mercury Alien on the Streets of Inchon (December 13, 2022)</li>
+  <li class="female" onclick="SelectSong('https://youtu.be/A1OU-9eVsk8')">The Principles of Time and Space: How Space Controls Time and Why Time is Fake (March 17, 2023)</li>
+  <li class="female" onclick="SelectSong('https://youtu.be/E1XzMP3vAB0')">Fearless Communication: The Key to Successful Space Craft Training with Aliens (November 11, 2021)</li>
+  <li class="female" onclick="SelectSong('https://youtu.be/kdv96fdo8hE')">Why we Communicate with the Alien who Gives us a Ride on the Space Craft (17 November, 2021)</li>
+  <li class="female" onclick="SelectSong('https://youtu.be/yhsoJUJ3iA4')">Body Transformation and Exploration into the Space of MUSIGONG: Conversation with Mei from Ohai Star</li>
+  <li class="female" onclick="SelectSong('https://youtu.be/CsKtvKC05uk')">Extraterrestrial Etou Shares Insights on BISHA and MUGEUK in Conversation with MUSIGONG</li>
+  <li class="female" onclick="SelectSong('https://youtu.be/97wLQfct2zQ')">The Body change experience of MUSIGONG. The whole body is getting loosened in fine detail</li>
+  <li class="female" onclick="SelectSong('https://youtu.be/bzQIE_UU5RQ')">Toa, What are the Mind that Earthian need to Change to go out into Outer Space?</li>
+  <li class="female" onclick="SelectSong('https://youtu.be/hI2wQK-Qj7A')">The Space Craft Training for a Member of MUSIGONG, and Conversation with Lorin, a star friend who...</li>
+  <li class="female" onclick="SelectSong('https://youtu.be/6YsZT_Sa2Wk')">Exploring the Prophecy of MUSIGONG LIFE: Unveiling the Hidden Treasures of Korea's Dongyi Tribe</li>
+  <li class="female" onclick="SelectSong('https://youtu.be/s6mFmLWWiHE')">Limited Perspectives of Humans on Sex in Half-Energy Ethereal Spaces (October 31, 2021)</li>
+  <li class="female" onclick="SelectSong('https://youtu.be/kz1w0RG7UhA')">Dalp, Creator of the Moon, Speaks about Its Origins and Purpose (February 10, 2018)</li>
+  <li class="female" onclick="SelectSong('https://youtu.be/_PBkf1Jb_HY')">About riding a space craft (Dec. 29, 2021)</li>
+  <li class="female" onclick="SelectSong('')"></li>
+  <li class="female" onclick="SelectSong('')"></li>
+  <li class="female" onclick="SelectSong('')"></li>
+  <li class="female" onclick="SelectSong('')"></li>
+  <li class="female" onclick="SelectSong('')"></li>
+  <li class="male" onclick="SelectSong('')"></li>
+  <li class="male" onclick="SelectSong('')"></li>
+  <li class="male" onclick="SelectSong('')"></li>
+  <li class="male" onclick="SelectSong('')"></li>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+  function SelectSong(a){
+    a=a.replace("youtu.be","www.youtube.com/embed");
+    document.getElementById('youtube_song').src=a;
+    window.scrollTo(0,0);
+  }
+  function HWview(){
+    var YF=document.getElementById("youtube_frame");
+    var WH_rate=window.innerWidth/window.innerHeight;
+    if(WH_rate>1.78){
+      YF.style.width=178/WH_rate+"%";
+      YF.style.paddingBottom=56.25*1.78/WH_rate+"%";
+    }else{
+      YF.style.width="100%";
+      YF.style.paddingBottom="56.25%";
+    }
+    var SL=document.getElementById('song_list');
+    SL.style.height=window.innerHeight+"px";
+  }
+  HWview();
+  window.addEventListener("resize",HWview);
+</script>
