@@ -10,8 +10,8 @@
 <body style="text-align:center">
   <div id="youtube_frame" class="video-inner" style="background-image: url(https://yt3.ggpht.com/EZYx7ny8t4DDle0CGX3xWdEjY8TI0tkkk-dHPjWSh96OeZu4S6ohMiOz0PQ2dZ-PKULkYupFug=s176-c-k-c0x00ffffff-no-rj); background-size: contain; background-position: center; background-repeat:no-repeat; display:none">
   <iframe id="youtube_song" frameborder="0" allowfullscreen="1" title="YouTube video player" src="https://www.youtube.com/embed/Y-gSbpWUXQQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-</div>
-  <div>
+  </div>
+  <div id="musigong_mark">
     <img src="https://yt3.ggpht.com/EZYx7ny8t4DDle0CGX3xWdEjY8TI0tkkk-dHPjWSh96OeZu4S6ohMiOz0PQ2dZ-PKULkYupFug=s176-c-k-c0x00ffffff-no-rj">
   </div>
   <div>
@@ -28,6 +28,7 @@
   function SelectSong(a){
     a=a.replace("youtu.be","www.youtube.com/embed");
     document.getElementById("youtube_frame").style.display="block";
+    document.getElementById("musigong_mark").style.display="none";
     document.getElementById('youtube_song').src=a;
     window.scrollTo(0,0);
   }
@@ -41,8 +42,6 @@
       YF.style.width="100%";
       YF.style.paddingBottom="56.25%";
     }
-    var SL=document.getElementById('song_list');
-    SL.style.height=window.innerHeight+"px";
   }
   HWview();
   window.addEventListener("resize",HWview);
