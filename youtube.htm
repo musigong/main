@@ -13,9 +13,10 @@ li.female{color: #ff5db1; display:block; text-overflow:ellipsis; overflow:hidden
 </style>
 </head>
 <body style="padding:0px">
-<div id="youtube_frame" class="video-inner" style="background-image: url(https://yt3.ggpht.com/EZYx7ny8t4DDle0CGX3xWdEjY8TI0tkkk-dHPjWSh96OeZu4S6ohMiOz0PQ2dZ-PKULkYupFug=s176-c-k-c0x00ffffff-no-rj); background-size: contain; background-position: center; background-repeat:no-repeat;">
-  <iframe id="youtube_song" frameborder="0" allowfullscreen="1" title="YouTube video player" src="https://www.youtube.com/embed/Y-gSbpWUXQQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-</div>
+  <div id="youtube_frame" class="video-inner" style="background-image: url(https://yt3.ggpht.com/EZYx7ny8t4DDle0CGX3xWdEjY8TI0tkkk-dHPjWSh96OeZu4S6ohMiOz0PQ2dZ-PKULkYupFug=s176-c-k-c0x00ffffff-no-rj); background-size: contain; background-position: center; background-repeat:no-repeat; display:none;">
+    <iframe id="youtube_song" frameborder="0" allowfullscreen="1" title="YouTube video player" src="https://www.youtube.com/embed/Y-gSbpWUXQQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+  </div>
+  <div style="height:30px; color: #685dff; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA3ElEQVR4Ae2WIQzDIBBFEdPV6Ip6L2Y3Me9NMzuB98GbWrysqHf1otWYismm+vYFTRCEhXXjJrjkmSslLwHgi8vjxkoRKAL/J0BCSHAHGhjQgxHMwIKnY/Px+taNHd2/Bmg3p4wKuIH0Y1RQAB+ugDJxDgn0GQVMSMBmFJhDApSTYwLLQtR13xNAo0oWINS6ErXtpxInX0CmC3g1TURNkypQ+QL1IYG9hiFFRPIL8C8B/ybkO4bsFxH7Vcz+GLE/x5yBRL+LZDVQkTi2Ochn70dimQpFspKKi0AReAF/IVUTZ3/BGQAAAABJRU5ErkJggg==); background-repeat:no-repeat; padding-left: 40px; line-height:30px">Musigong Youtube List</div>
 <div id="song_list" style="overflow: auto;">
   <li class="male" onclick="SelectSong('https://youtu.be/Y-gSbpWUXQQ')">Musigong introduction</li>
   <li class="male" onclick="SelectSong('https://youtu.be/WLUM21MOfhI')">Musigong Life Experiences</li>
@@ -86,6 +87,7 @@ li.female{color: #ff5db1; display:block; text-overflow:ellipsis; overflow:hidden
 <script type="text/javascript">
   function SelectSong(a){
     a=a.replace("youtu.be","www.youtube.com/embed");
+    document.getElementById("youtube_frame").style.display="block";
     document.getElementById('youtube_song').src=a;
     window.scrollTo(0,0);
   }
