@@ -7,13 +7,13 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="shortcut icon" href="/favicon.ico">
   <style>
-    li{cursor: pointer;}
+    li{cursor: pointer; display:block; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
     li.male{color: #685dff}
     li.female{color: #ff5db1}
   </style>
 </head>
 <body style="padding:0px">
-<div id="youtube_frame" class="video-inner" style="background-image: url(https://yt3.ggpht.com/EZYx7ny8t4DDle0CGX3xWdEjY8TI0tkkk-dHPjWSh96OeZu4S6ohMiOz0PQ2dZ-PKULkYupFug=s176-c-k-c0x00ffffff-no-rj); background-size: contain; background-position: center; background-repeat:no-repeat;">
+<div id="youtube_frame" class="video-inner" style="background-image: url(https://yt3.ggpht.com/EZYx7ny8t4DDle0CGX3xWdEjY8TI0tkkk-dHPjWSh96OeZu4S6ohMiOz0PQ2dZ-PKULkYupFug=s176-c-k-c0x00ffffff-no-rj); background-size: contain; background-position: center; background-repeat:no-repeat; display:none;">
   <iframe id="youtube_song" frameborder="0" allowfullscreen="1" title="YouTube video player" src="https://www.youtube.com/embed/zJ7d7KiLUA4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
 </div>
 <div id="song_list" style="overflow: auto;">
@@ -25,6 +25,7 @@
   <li class="male" onclick="SelectSong('https://youtu.be/u41Yus05zvI')">꽃보다아름다운너(배일호)</li>
   <li class="male" onclick="SelectSong('https://youtu.be/ESnrb--1yFQ')">꽃을든남자(최석준)</li>
   <li class="male" onclick="SelectSong('https://youtu.be/7xFAYs0Ee8Y')">기타부기(윤일로)</li>
+  <li class="male" onclick="SelectSong('https://youtu.be/fBE4jDTVDiA')">나그네설움(백년설)</li>
   <li class="male" onclick="SelectSong('https://youtu.be/bRtH_sFasE8')">내나이가어때서(오승근)</li>
   <li class="female" onclick="SelectSong('https://youtu.be/oN2OsJBz8Fo')">내사랑그대여(김용임)</li>
   <li class="male" onclick="SelectSong('https://youtu.be/8J5Nzr3zpQw')">내일은해가뜬다(장철웅)</li>
@@ -85,6 +86,7 @@
 <script type="text/javascript">
   function SelectSong(a){
     a=a.replace("youtu.be","www.youtube.com/embed");
+    document.getElementById("youtube_frame").style.display="block";
     document.getElementById('youtube_song').src=a;
     window.scrollTo(0,0);
   }
