@@ -10,7 +10,7 @@
 li{cursor: pointer; display:block; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}</style>
 </head>
 <body style="padding:0px">
-<div id="youtube_frame" class="video-inner" style="background-image: url(https://yt3.ggpht.com/EZYx7ny8t4DDle0CGX3xWdEjY8TI0tkkk-dHPjWSh96OeZu4S6ohMiOz0PQ2dZ-PKULkYupFug=s176-c-k-c0x00ffffff-no-rj); background-size: contain; background-position: center; background-repeat:no-repeat; display:none;">
+<div id="youtube_frame" class="video-inner" style="background-image: url(https://yt3.ggpht.com/EZYx7ny8t4DDle0CGX3xWdEjY8TI0tkkk-dHPjWSh96OeZu4S6ohMiOz0PQ2dZ-PKULkYupFug=s176-c-k-c0x00ffffff-no-rj); background-size: contain; background-position: center; background-repeat:no-repeat; ">
   <iframe id="youtube_song" frameborder="0" allowfullscreen="1" title="YouTube video player" src="https://www.youtube.com/embed/Y-gSbpWUXQQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
 </div>
 <div id="song_list" style="overflow: auto;">
@@ -83,7 +83,6 @@ li{cursor: pointer; display:block; text-overflow:ellipsis; overflow:hidden; whit
 <script type="text/javascript">
   function SelectSong(a){
     a=a.replace("youtu.be","www.youtube.com/embed");
-    document.getElementById("youtube_frame").style.display="block";
     document.getElementById('youtube_song').src=a;
     window.scrollTo(0,0);
   }
