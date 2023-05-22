@@ -90,15 +90,23 @@ li{cursor: pointer; display:block; text-overflow:ellipsis; overflow:hidden; whit
   }
   function HWview(){
     var YF=document.getElementById("youtube_frame");
+    var SL=document.getElementById('song_list');
     var WH_rate=window.innerWidth/window.innerHeight;
     if(WH_rate>1.78){
-      YF.style.width=178/WH_rate+"%";
+      //YF.style.width=178/WH_rate+"%";
+      YF.style.width="70%";
+      YF.style.float="left";
+      SL.style.width="30%";
+      SL.style.float="left";
       YF.style.paddingBottom=56.25*1.78/WH_rate+"%";
+      //YF.style.paddingBottom=56.25*0.7+"%";
     }else{
       YF.style.width="100%";
       YF.style.paddingBottom="56.25%";
+      YF.style.float="none";
+      SL.style.width="100%";
+      SL.style.float="none";
     }
-    var SL=document.getElementById('song_list');
     SL.style.height=window.innerHeight+"px";
   }
   HWview();
