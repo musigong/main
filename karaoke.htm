@@ -12,9 +12,9 @@
     li.female{color: #ff5db1}
   </style>
 </head>
-<body style="padding:0px">
-<div id="youtube_frame" class="video-inner" style="background-image: url(https://yt3.ggpht.com/EZYx7ny8t4DDle0CGX3xWdEjY8TI0tkkk-dHPjWSh96OeZu4S6ohMiOz0PQ2dZ-PKULkYupFug=s176-c-k-c0x00ffffff-no-rj); background-size: contain; background-position: center; background-repeat:no-repeat; ">
-  <iframe id="youtube_song" frameborder="0" allowfullscreen="1" title="YouTube video player" src="https://www.youtube.com/embed/bkQg9gaV98Q" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+<body>
+<div id="youtube_frame" class="video-inner" style="background-image: url(https://yt3.ggpht.com/EZYx7ny8t4DDle0CGX3xWdEjY8TI0tkkk-dHPjWSh96OeZu4S6ohMiOz0PQ2dZ-PKULkYupFug=s176-c-k-c0x00ffffff-no-rj); background-size: contain; background-position: center; background-repeat:no-repeat;">
+  <iframe id="youtube_song" frameborder="0" allowfullscreen="1" title="YouTube video player" src="https://www.youtube.com/embed/bkQg9gaV98Q?list=PLUzRe8uA6Jof5VqHTAzYYkdtm8SvRK_yA" allow="autoplay; fullscreen"></iframe>
 </div>
 <div id="song_list" style="overflow: auto;">
   <li onclick="SelectSong('https://youtu.be/bkQg9gaV98Q')">가지마오(나훈아)</li>
@@ -93,14 +93,19 @@
   <li onclick="SelectSong('https://youtu.be/BVtSKIQY6bY')">허공(조용필)</li>
   <li onclick="SelectSong('https://youtu.be/7Qkh2rk6uIo')">홀로아리랑(서유석)</li>
   <li class="female" onclick="SelectSong('https://youtu.be/wXVH69Bjm2g')">홀로아리랑(서유석)여자키</li>
+  <li class="female" onclick="SelectSong('')">.</li>
+  <li class="female" onclick="SelectSong('')">.</li>
+  <li class="female" onclick="SelectSong('')">.</li>
+  <li onclick="SelectSong('')">.</li>
+  <li onclick="SelectSong('')">.</li>
+  <li onclick="SelectSong('')">.</li>
 </div>
 </body>
 </html>
 <script type="text/javascript">
   function SelectSong(a){
     a=a.replace("youtu.be","www.youtube.com/embed");
-    document.getElementById("youtube_frame").style.display="block";
-    document.getElementById('youtube_song').src=a;
+    document.getElementById('youtube_song').src=a+'?list=PLUzRe8uA6Jof5VqHTAzYYkdtm8SvRK_yA';
     window.scrollTo(0,0);
   }
   function HWview(){
